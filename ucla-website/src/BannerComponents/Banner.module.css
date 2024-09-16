@@ -1,0 +1,46 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    background-color: rgb(68, 134, 233);
+    grid-column: 1/4;
+    z-index: 1;
+
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto minmax(250px, 500px) 100px;
+}
+
+/* Find a way to dynamically hide all text if there isn't enough space to display*/
+.bannerIcon {
+    position: relative;
+    /* background: red; */
+    overflow: hidden;
+    color: white;
+    font-size: 20px;
+}
+
+.bannerPages {
+    /* background: green; */
+    color: white;
+}
+
+.bannerLogin {
+    /* background: blue; */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.loginButton {
+    align-self: auto;
+}
+
+.bannerIMG {
+    max-height: 50px;
+    padding: 8px
+}
+

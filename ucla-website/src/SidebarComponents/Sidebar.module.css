@@ -1,0 +1,65 @@
+/* Sidebar Styling */
+
+.sidebarStyle {
+    color: black;
+    background-color: rgb(240, 246, 250);
+    grid-row: span 2;
+    grid-column: span 1;
+
+    border-color: rgb(177, 175, 172);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    width: 97%;
+    height: 97%;
+    margin: auto;
+    justify-content: center;
+    align-items: center
+}
+
+.sidebarDivider {
+    border: '1px solid black';
+    width: 85%;
+    align-self: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.sidebarTextStrong {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sidebarTextNormal {
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.sidebarDropdown {
+    align-self: center;
+    margin: 0 auto;
+    background-color: red;
+    color: blue;
+}
+
+.sidebarListContainer {
+    font-weight: normal;
+    font-size: 16px;
+    width: 95%;
+}
+
+.sidebarListItem {
+    color: red;
+}
+
+.BruinWalkText {
+    color: red;
+    font-size: 10px;
+}
