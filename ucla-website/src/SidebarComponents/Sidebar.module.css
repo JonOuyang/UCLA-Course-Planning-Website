@@ -18,7 +18,7 @@
     height: 97%;
     margin: auto;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .sidebarDivider {
@@ -63,3 +63,22 @@
     color: red;
     font-size: 10px;
 }
+
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid black;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+.dropdown-item {
+    text-align: center;
+    color: black !important;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+.dropdown-item:hover {
+    background-color: #f1f1f1; 
+  }
+  
