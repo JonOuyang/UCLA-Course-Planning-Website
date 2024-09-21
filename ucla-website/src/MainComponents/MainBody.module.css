@@ -1,0 +1,16 @@
+.bodyGrid {
+    background-color: white;
+    display: grid;
+    height: 100vh; /* Total height is fixed */
+    width: 100vw;
+    grid-template-rows: 1fr 2fr 1fr; /* Distributes space proportionally */
+}
+.yearTitle {
+    color: white;
+    background-color: red;
+}
+
+.yearTitle2 {
+    color: white;
+    background-color: blue;
+}
