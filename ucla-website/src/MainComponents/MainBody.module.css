@@ -2,9 +2,8 @@
     display: flex;
     background-color: white;
     display: grid;
-    height: 500px; /* Total height is fixed */
     width: 100vw;
-    grid-template-rows: 800px 500px 500px 500px; /* Distributes space proportionally */
+    grid-template-rows: 400px 400px 400px 400px; /* Distributes space proportionally */
 }
 .yearTitle {
     color: white;
