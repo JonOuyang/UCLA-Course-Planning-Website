@@ -1,9 +1,10 @@
 .bodyGrid {
+    display: flex;
     background-color: white;
     display: grid;
     height: 500px; /* Total height is fixed */
     width: 100vw;
-    grid-template-rows: 1fr 2fr 1fr; /* Distributes space proportionally */
+    grid-template-rows: 800px 500px 500px 500px; /* Distributes space proportionally */
 }
 .yearTitle {
     color: white;
