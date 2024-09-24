@@ -2,15 +2,68 @@
     display: flex;
     background-color: white;
     display: grid;
-    width: 100vw;
-    grid-template-rows: 400px 400px 400px 400px; /* Distributes space proportionally */
+    grid-template-rows: 20px 400px 400px 400px 400px; /* Distributes space proportionally */
+    padding-left: 10px;
 }
 .yearTitle {
-    color: white;
-    background-color: red;
+    color: black;
+    background-color: white;
 }
 
-.yearTitle2 {
-    color: white;
-    background-color: blue;
+.sidebarDivider {
+    border: '20px solid black';
+    width: 95%;
+    align-self: left;
 }
+
+.classTitle {
+    color: black;
+    font-size: 30px;
+}
+
+.courseBoxes {
+    color: black;
+    background-color: rgb(240, 246, 250);
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    border-color: rgb(235, 230, 223);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    width: 96%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.titleBoxes {
+    color: black;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    justify-content: left;
+    align-items: left;
+}
+
+.seasonTitle {
+    font-size: 15px
+}
+
+.seasonBox {
+    border: 2px solid rgb(0, 0, 0);
+    height: 95%;
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+  }

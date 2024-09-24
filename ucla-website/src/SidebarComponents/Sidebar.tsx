@@ -5,26 +5,26 @@ import styles from "./Sidebar.module.css"; // Import your custom CSS
 // Sample data
 let genEds = ["class 1", "class 2", "class 3"];
 let lowerDivs = [
-"Com Sci 1",
-"Com Sci 31",
-"Com Sci 32",
-"Com Sci 33",
-"Com Sci 34",
-"Com Sci 35L",
-"Math 31",
-"Math 32",
-"Math 33a",
-"Math 33b",
-"Math 61",
+  "Com Sci 1",
+  "Com Sci 31",
+  "Com Sci 32",
+  "Com Sci 33",
+  "Com Sci 34",
+  "Com Sci 35L",
+  "Math 31",
+  "Math 32",
+  "Math 33a",
+  "Math 33b",
+  "Math 61",
 ];
 let upperDivs = [
-"Com Sci 101",
-"Com Sci 102",
-"Com Sci 103",
-"Com Sci 104",
-"Com Sci 105",
-"Math 101",
-"Math 102",
+  "Com Sci 101",
+  "Com Sci 102",
+  "Com Sci 103",
+  "Com Sci 104",
+  "Com Sci 105",
+  "Math 101",
+  "Math 102",
 ];
 
 // Define the major lists for each internal school at UCLA
@@ -134,21 +134,19 @@ const majorsTheCollege = [
   "Spanish and Linguistics (B.A.)",
   "Spanish and Portuguese (B.A.)",
   "Statistics and Data Science (B.S.)",
-  "Individual Field of Concentration (B.A./ B.S.)"
-  ];
-  
-  const majorsSchoolOfArtsAndArchitecture = [
-  
+  "Individual Field of Concentration (B.A./ B.S.)",
+];
+
+const majorsSchoolOfArtsAndArchitecture = [
   "Architectural Studies (B.A.)",
   "Art (B.A.)",
   "Dance (B.A.)",
   "Design | Media Arts (B.A.)",
   "World Arts and Cultures (B.A.)",
-  "Individual Field of Concentration in the Arts and Architecture (B.A.) *"
-  
-  ];
-  
-  const majorsTheSamueliSchoolOfEngineering = [
+  "Individual Field of Concentration in the Arts and Architecture (B.A.) *",
+];
+
+const majorsTheSamueliSchoolOfEngineering = [
   "Aerospace Engineering (B.S.)",
   "Bioengineering (B.S.)",
   "Chemical Engineering (B.S.)",
@@ -158,130 +156,151 @@ const majorsTheCollege = [
   "Computer Science and Engineering (B.S.)",
   "Electrical Engineering (B.S.)",
   "Materials Engineering (B.S.)",
-  "Mechanical Engineering (B.S.)"
-  ];
-  
-  const majorsHerbAlpertSchoolOfMusic = [
+  "Mechanical Engineering (B.S.)",
+];
+
+const majorsHerbAlpertSchoolOfMusic = [
   "Ethnomusicology (B.A.)",
   "Global Jazz Studies (B.A.)",
   "Musicology (B.A.)",
   "Music Composition (B.A.)",
   "Music Education (B.A.)",
   "Music Industry (B.A.)",
-  "Music Performance (B.M.)"
-  ];
-  
-  const majorSchoolOfNursing = [
-  "Nursing - Prelicensure (B.S.)"
-  ];
-  
-  const majorLuskinSchoolofPublicAffairs = [
-  "Public Affairs (B.A.)"
-  
-  ];
-  
-  const majorSchoolOfTheaterFilmAndTelevision = [
+  "Music Performance (B.M.)",
+];
+
+const majorSchoolOfNursing = ["Nursing - Prelicensure (B.S.)"];
+
+const majorLuskinSchoolofPublicAffairs = ["Public Affairs (B.A.)"];
+
+const majorSchoolOfTheaterFilmAndTelevision = [
   "Film and Television (B.A.)",
   "Theater (B.A.)",
-  "Individual Field of Concentration in Theater, Film and Television (B.A.)"
-  ];
-  
-  const majorSchoolOfEducationAndInformationStudies = [
-  "Education and Social Transformation (B.A.)"
-  ];
-  
-  const majorFieldingSchoolOfPublicHealth = [
-  
+  "Individual Field of Concentration in Theater, Film and Television (B.A.)",
+];
+
+const majorSchoolOfEducationAndInformationStudies = [
+  "Education and Social Transformation (B.A.)",
+];
+
+const majorFieldingSchoolOfPublicHealth = [
   "Public Health (B.A.)",
-  "Public Health (B.S.)"
-  ];
+  "Public Health (B.S.)",
+];
 
 // Helper function to list majors from each school under a section
 function listDropdownItems(schoolName: string, majors: string[]) {
-return (
-<>
-<li className="dropdown-header">{schoolName}</li>
-{majors.map((major, index) => (
-<li key={index}>
-<a className="dropdown-item" href="#">
-{major}
-</a>
-</li>
-))}
-<li><hr className="dropdown-divider" /></li> {/* Divider between schools */}
-</>
-);
+  return (
+    <>
+      <li className="dropdown-header">{schoolName}</li>
+      {majors.map((major, index) => (
+        <li key={index}>
+          <a className="dropdown-item" href="#">
+            {major}
+          </a>
+        </li>
+      ))}
+      <li>
+        <hr className="dropdown-divider" />
+      </li>{" "}
+      {/* Divider between schools */}
+    </>
+  );
 }
 
 // Function to list items such as General Education, Lower Division, and Upper Division
 function listItems(list: string[]) {
-return (
-<ul className={`no-borders ${styles.sidebarListContainer}`}>
-{list.map((classID: string, index: number) => (
-<li
-className="list-group-item d-flex justify-content-between align-items-center"
-key={index}
->
-• {classID}
-<a
-href={`https://www.bruinwalk.com/classes/${classID
-.replaceAll(" ", "-")
-.toLowerCase()}/`}
-target="_blank"
-className={`badge text-bg-primary rounded-pill ${styles.BruinWalkText}`}
-style={{
-fontSize: "12px",
-fontWeight: "normal",
-textDecoration: "none",
-}}
->
-BruinWalk
-</a>
-</li>
-))}
-</ul>
-);
+  return (
+    <ul className={`no-borders ${styles.sidebarListContainer}`}>
+      {list.map((classID: string, index: number) => (
+        <li
+          className="list-group-item d-flex justify-content-between align-items-center"
+          key={index}
+        >
+          • {classID}
+          <a
+            href={`https://www.bruinwalk.com/classes/${classID
+              .replaceAll(" ", "-")
+              .toLowerCase()}/`}
+            target="_blank"
+            className={`badge text-bg-primary rounded-pill ${styles.BruinWalkText}`}
+            style={{
+              fontSize: "12px",
+              fontWeight: "normal",
+              textDecoration: "none",
+            }}
+          >
+            BruinWalk
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 const Sidebar = () => {
-return (
-<div className={styles.sidebarStyle}>
-<strong className={styles.sidebarTextStrong}>User Information</strong>
-<hr className={styles.sidebarDivider} />
-<p className={styles.sidebarTextNormal}>Major</p>
-<div className="dropdown">
-<button
-className="btn btn-secondary dropdown-toggle"
-type="button"
-id="dropdownMenuButton"
-data-bs-toggle="dropdown"
-aria-expanded="false"
->
-Select Major
-</button>
-<ul className={`dropdown-menu ${styles.dropdownMenu}`} aria-labelledby="dropdownMenuButton">
-{listDropdownItems("The College", majorsTheCollege)}
-{listDropdownItems("School of the Arts and Architecture", majorsSchoolOfArtsAndArchitecture)}
-{listDropdownItems("The Samueli School of Engineering", majorsTheSamueliSchoolOfEngineering)}
-{listDropdownItems("Herb Alpert School of Music", majorsHerbAlpertSchoolOfMusic)}
-{listDropdownItems("School of Nursing", majorSchoolOfNursing)}
-{listDropdownItems("Luskin School of Public Affairs", majorLuskinSchoolofPublicAffairs)}
-{listDropdownItems("School of Theater, Film, and Television", majorSchoolOfTheaterFilmAndTelevision)}
-{listDropdownItems("School of Education and Information Studies", majorSchoolOfEducationAndInformationStudies)}
-{listDropdownItems("Fielding School of Public Health", majorFieldingSchoolOfPublicHealth)}
-</ul>
-</div>
-<strong className={styles.sidebarTextStrong}>General Education</strong>
-<hr className={styles.sidebarDivider} />
-{listItems(genEds)}
-<strong className={styles.sidebarTextStrong}>Lower Division</strong>
-<hr className={styles.sidebarDivider} />
-{listItems(lowerDivs)}
-<strong className={styles.sidebarTextStrong}>Upper Division</strong>
-<hr className={styles.sidebarDivider} />
-{listItems(upperDivs)}
-</div>
-);
+  return (
+    <div className={styles.sidebarStyle}>
+      <strong className={styles.sidebarTextStrong}>User Information</strong>
+      <hr className={styles.sidebarDivider} />
+      <p className={styles.sidebarTextNormal}>Major</p>
+      <div className="dropdown">
+        <button
+          className="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Select Major
+        </button>
+        <ul
+          className={`dropdown-menu ${styles.dropdownMenu}`}
+          aria-labelledby="dropdownMenuButton"
+        >
+          {listDropdownItems("The College", majorsTheCollege)}
+          {listDropdownItems(
+            "School of the Arts and Architecture",
+            majorsSchoolOfArtsAndArchitecture
+          )}
+          {listDropdownItems(
+            "The Samueli School of Engineering",
+            majorsTheSamueliSchoolOfEngineering
+          )}
+          {listDropdownItems(
+            "Herb Alpert School of Music",
+            majorsHerbAlpertSchoolOfMusic
+          )}
+          {listDropdownItems("School of Nursing", majorSchoolOfNursing)}
+          {listDropdownItems(
+            "Luskin School of Public Affairs",
+            majorLuskinSchoolofPublicAffairs
+          )}
+          {listDropdownItems(
+            "School of Theater, Film, and Television",
+            majorSchoolOfTheaterFilmAndTelevision
+          )}
+          {listDropdownItems(
+            "School of Education and Information Studies",
+            majorSchoolOfEducationAndInformationStudies
+          )}
+          {listDropdownItems(
+            "Fielding School of Public Health",
+            majorFieldingSchoolOfPublicHealth
+          )}
+        </ul>
+      </div>
+      <strong className={styles.sidebarTextStrong}>General Education</strong>
+      <hr className={styles.sidebarDivider} />
+      {listItems(genEds)}
+      <strong className={styles.sidebarTextStrong}>Lower Division</strong>
+      <hr className={styles.sidebarDivider} />
+      {listItems(lowerDivs)}
+      <strong className={styles.sidebarTextStrong}>Upper Division</strong>
+      <hr className={styles.sidebarDivider} />
+      {listItems(upperDivs)}
+    </div>
+  );
 };
 
 export default Sidebar;
