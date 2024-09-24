@@ -1,5 +1,7 @@
 import styles from "./MainBody.module.css";
 
+
+
 function yearLayout(title: string) {
   return (
     <div className={styles.yearTitle}>
@@ -14,7 +16,13 @@ function yearLayout(title: string) {
       </div>
 
       <div className={styles.courseBoxes}>
-        <div className={styles.seasonBox}>Placeholder Values</div>
+        <div className={styles.seasonBox}>
+          <div>{/* background color is white if not taken up, etc */}</div> 
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+          <div>test</div>
+        </div>
         <div className={styles.seasonBox}>Placeholder Values</div>
         <div className={styles.seasonBox}>Placeholder Values</div>
       </div>

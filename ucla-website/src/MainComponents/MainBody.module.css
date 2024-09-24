@@ -38,9 +38,9 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     width: 96%;
-    height: 60%;
+    height: 70%;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .titleBoxes {
@@ -60,8 +60,15 @@
 }
 
 .seasonBox {
+    font-size: 10px;
     border: 2px solid rgb(0, 0, 0);
     height: 95%;
+    
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+
+    
+
 }
 
 .vl {

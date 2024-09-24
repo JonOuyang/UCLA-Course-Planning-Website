@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Ensure JS is loaded for dropdowns
 import styles from "./Sidebar.module.css"; // Import your custom CSS
+import { useState } from "react";
 
 // Sample data
 let genEds = ["class 1", "class 2", "class 3"];
@@ -239,6 +240,8 @@ function listItems(list: string[]) {
 }
 
 const Sidebar = () => {
+  let [selectedMajor, selectMajor] = useState("Select Major");
+
   return (
     <div className={styles.sidebarStyle}>
       <strong className={styles.sidebarTextStrong}>User Information</strong>
@@ -252,19 +255,20 @@ const Sidebar = () => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Select Major
+          {selectedMajor}
         </button>
         <ul
           className={`dropdown-menu ${styles.dropdownMenu}`}
           aria-labelledby="dropdownMenuButton"
+          onClick={(e) => selectMajor("temporary value")}
         >
-          {listDropdownItems("The College", majorsTheCollege)}
+          {listDropdownItems("The College (L&S)", majorsTheCollege)}
           {listDropdownItems(
             "School of the Arts and Architecture",
             majorsSchoolOfArtsAndArchitecture
           )}
           {listDropdownItems(
-            "The Samueli School of Engineering",
+            "Samueli School of Engineering",
             majorsTheSamueliSchoolOfEngineering
           )}
           {listDropdownItems(
